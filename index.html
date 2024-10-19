@@ -5,25 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 
 <body>
     <header>
+        <!-- <img src="images/h1-background.jpg" alt="Mountains"> -->
         <h1>Cerise's Hiking Adventures</h1>
-        <nav>
-            <!-- I will make these my 4 additional pages with content -->
-            <ul>
-                <li><a href="index.html" class="current">Home</a></li>
-                <li><a href="#">Ten Essentials of Hiking</a></li>
-                <li><a href="#">Best Hiking Apps</a></li>
-                <li><a href="#">Leave No Trace</a></li>
-                <li><a href="#">What is Hiking</a></li>
-            </ul>
-        </nav>
+        <img src="images/mailbox-peak2.jpg" alt="mailbox" id="main-image">
     </header>
+
+    <nav>
+        <ul class="nav-bar">
+            <li><a href="https://americanhiking.org/resources/10essentials/" target="_blank">10 Essentials</a></li>
+            <li><a href="https://www.thegreatoutdoorsmag.com/gear-guides/best-hiking-apps/" target="_blank">Hiking Apps</a></li>
+            <li><a href="https://www.nps.gov/articles/leave-no-trace-seven-principles.htm" target="_blank">Leave No Trace</a></li>
+            <!-- I will make this page of photos from my hikes -->
+            <li><a href="#">Photo Gallery</a></li>
+            <li id="current"><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section>
-            <h2>Hiking</h2>
+        <section class="hiking-love">
             <p>My love for hiking started when I was a little girl. Exploring trails with my family, ignited a sense
                 of wonder and curiosity. Each new adventure filled me with excitement. Those early childhood
                 experiences instilled a deep appreciated for the beauty of nature and those memories still inspire
@@ -35,6 +43,9 @@
                 accomplishment when reaching a summit or discovering a hidden waterfall is exhilirting. Hiking
                 allows me to
                 connect the environment and reconnect with myself.</p>
+        </section>
+
+        <section class="top-hikes">
             <h2>My Top 4 hikes</h2>
             <!-- new images to be added, need to download from google photos -->
             <img src="images/pnwHike.jpg" alt="Mountains" height="80">
@@ -43,8 +54,9 @@
             <img src="images/pnwHike.jpg" alt="Mountains" height="80">
         </section>
     </main>
+
     <footer>
-        <p>&copy; Copyright 2024 - Olympic College: Fall 2024</p>
+        <p>&copy; Copyright 2024 - <em id="name">Cerise Richardson</em> - Olympic College: Fall 2024</p>
     </footer>
 </body>
 

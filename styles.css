@@ -1,0 +1,77 @@
+* {
+    font-family: "Spinnaker", sans-serif;
+    text-align: center;
+}
+body {
+    width: 90%;
+    margin: auto;
+}
+
+/* header styling */
+h1 {
+    /* text-align: center; */
+    padding: .75rem;
+}
+/* id selector */
+#main-image {
+    width: 100%;
+    display: block;
+    max-width: 1200px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: .5em auto;
+}
+
+/* navigation menu styling*/
+nav {
+    max-width: 1200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* contrast ratio 12.7:1 webaim.org */
+    background-color: #adcdeb;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    float: left;
+    color: #000;
+    /* text-align: center; */
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #9bc2e6;
+    /* font styling */
+    font-weight: 800;   
+}
+#current {
+    float: right;
+}
+
+/* main styling */
+.hiking-love p {
+    line-height: 1.5;
+    /* text-align: center; */
+    max-width: 1200px;
+    margin: .5em auto;
+}
+.top-hikes img {
+    width: 15%;
+    height: 15%;
+}
+
+/* footer */
+#name {
+    /* font styling */
+    font-family: cursive;
+    color: #00008b;
+}
