@@ -1,0 +1,35 @@
+/* nav menu styling*/
+nav {
+    max-width: 1200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #adcdeb;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* contrast ratio 12.7:1 webaim.org */
+    background-color: #adcdeb;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    float: left;
+    color: #000;
+    /* text-align: center; */
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #9bc2e6;
+    /* font styling */
+    font-weight: 800;   
+}
+#current {
+    float: right;
+}
