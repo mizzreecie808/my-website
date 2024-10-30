@@ -8,7 +8,7 @@ html {
     background-color: #cfc9c1;
 }
 body {
-    width: 85%;
+    /* width: 90%; */
     margin: auto;
     background-color: whitesmoke;
     padding: .5em 2em;
@@ -16,11 +16,14 @@ body {
 
 /* header styling */
 header {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 10px auto;
 }
 h1 {
-    margin: 30px auto;;
+    margin: 30px auto 10px;
+}
+h3 {
+    margin-bottom: 30px;
 }
 #main-image {
     width: 100%;
@@ -30,7 +33,7 @@ h1 {
 
 /* nav menu styling */
 nav {
-    max-width: 1200px;
+    max-width: 1500px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -61,51 +64,27 @@ li a:hover {
     float: right;
 }
 
-/* 1st section styling*/
+/* 10 essentials styling */
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.hiking-love {
-    padding: 2em 1em;
-    float: left;
-    width: 61%;
-    /* height: 350px; */
-}
-.hiking-love p {
-    line-height: 1.7;
-    margin: auto;
-}
-
-/* aside styling */
-aside {
     padding: 2em 0;
-    float: right;
-    width: 34%;
-    margin: 2em 0;
-}
-#girl {
-    max-width: 200px;
-}
 
-/* 2nd (top-hikes) section styling */
-.top-hikes {
+}
+.ten-images {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    max-width: 1500px;
+    margin: auto;
+    justify-content: center;
+    flex-grow: 1;
+}
+.ten-images img {
     padding: 1em;
-    background-color: #e2e8ee;
-    border-radius: 10px;
-    clear: both;
-}
-.top-hikes > h2 {
-    margin: 0;
-}
-.hiking-images {
-    padding-top: 1em;
+    width: 350px;
 }
 
 /* footer */
-footer {
-    margin: 30px 0 0;
-}
 #name {
     font-family: cursive;
     color: #00008b;
