@@ -16,81 +16,53 @@ body {
 
 /* header styling */
 header {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 10px auto;
 }
 h1 {
     margin: 30px auto;;
 }
-#main-image {
+header #main-image {
     width: 100%;
     display: block;
     margin: 0 auto 10px;
 }
 
-/* nav menu styling */
-nav {
-    max-width: 1200px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #adcdeb;
-}
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #adcdeb;
-}
-li {
-    float: left;
-}
-li a {
-    display: block;
-    float: left;
-    color: #000;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-li a:hover {
-    background-color: #9bc2e6;
-    font-weight: 800;   
-}
-#current {
-    float: right;
-}
-
 /* 1st section styling*/
 main {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 98%;
+    margin: .75em auto;
+    height: 400px;
 }
 .hiking-love {
     padding: 2em 1em;
     float: left;
-    width: 61%;
-    /* height: 350px; */
+    width: 71%;
+    margin: auto;
+    text-align: center;
 }
 .hiking-love p {
     line-height: 1.7;
-    margin: auto;
 }
 
 /* aside styling */
 aside {
-    padding: 2em 0;
     float: right;
-    width: 34%;
-    margin: 2em 0;
+    width: 24%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 400px;
 }
-#girl {
-    max-width: 200px;
+aside #girl {
+    width: 90%;
+    margin: auto;
+    display: block;
 }
 
-/* 2nd (top-hikes) section styling */
+/* 2nd section styling */
 .top-hikes {
-    padding: 1em;
+    padding: 1em .5em;
     background-color: #e2e8ee;
     border-radius: 10px;
     clear: both;
@@ -101,10 +73,17 @@ aside {
 .hiking-images {
     padding-top: 1em;
 }
+.top-hikes .hiking-images img {
+    width: 45%;
+    padding: .5em;
+}
 
 /* footer */
 footer {
-    margin: 30px 0 0;
+    margin: 20px auto;
+}
+footer p:nth-child(2) {
+    padding-top: .5em;
 }
 #name {
     font-family: cursive;

@@ -5,25 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/nav-styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#nav-menu").slicknav({prependTo:"#mobile-menu"});
+		});
+	</script>
 </head>
 
 <body>
-    <header>
+    <header id="top">
         <h1>Cerise's Hiking Adventures</h1>
         <img src="images/mailbox-peak2.jpg" alt="mailbox" id="main-image">
     </header>
 
-    <nav>
-        <ul class="nav-bar">
-            <li><a href="essentials.html" target="_blank">10 Essentials</a></li>
+    <nav id="mobile-menu"></nav>
+    <nav id="nav-menu">
+        <ul class="nav-list">
+            <li><a href="pages/essentials.html" target="_blank">10 Essentials</a></li>
             <li><a href="https://www.thegreatoutdoorsmag.com/gear-guides/best-hiking-apps/" target="_blank">Hiking Apps</a></li>
             <li><a href="https://www.nps.gov/articles/leave-no-trace-seven-principles.htm" target="_blank">Leave No Trace</a></li>
-            <li><a href="index.html#page-link">Photo Gallery</a></li>
+            <li><a href="pages/photo-gallery.html" target="_blank">Photo Gallery</a></li>
             <li id="current"><a href="index.html">Home</a></li>
         </ul>
     </nav>
@@ -43,26 +53,25 @@
                 connect the environment and reconnect with myself.</p>
         </section>
         <aside>
-            <img src="images/wonder-girl.jpg" alt="adventurer" id="girl">
+            <img src="images/aside-image.jpg" alt="adventurer" id="girl">
         </aside>
-
-        <section class="top-hikes">
-            <h2 id="page-link">Image Gallery</h2>
-            <!-- new images to be added, need to download from google photos -->
-            <div class="hiking-images">
-                <img src="images/pnwHike.jpg" alt="Mountains">
-                <img src="images/pnwHike.jpg" alt="Mountains">
-                <img src="images/pnwHike.jpg" alt="Mountains">
-                <img src="images/pnwHike.jpg" alt="Mountains">
-                <img src="images/pnwHike.jpg" alt="Mountains">
-                <img src="images/pnwHike.jpg" alt="Mountains">
-                <img src="images/pnwHike.jpg" alt="Mountains">
-                <img src="images/pnwHike.jpg" alt="Mountains">
-            </div>
-        </section>
     </main>
+    <section class="top-hikes">
+        <h2 id="page-link">Image Gallery</h2>
+        <div class="hiking-images">
+            <img src="images/pnwHike.jpg" alt="Mountains">
+            <img src="images/pnwHike.jpg" alt="Mountains">
+            <img src="images/pnwHike.jpg" alt="Mountains">
+            <img src="images/pnwHike.jpg" alt="Mountains">
+            <img src="images/pnwHike.jpg" alt="Mountains">
+            <img src="images/pnwHike.jpg" alt="Mountains">
+            <img src="images/pnwHike.jpg" alt="Mountains">
+            <img src="images/pnwHike.jpg" alt="Mountains">
+        </div>
+    </section>
 
     <footer>
+        <p><a href="index.html#top">Back to Top</a></p>
         <p>&copy; Copyright 2024 - <em id="name">Cerise Richardson</em> - Olympic College: Fall 2024</p>
     </footer>
 </body>

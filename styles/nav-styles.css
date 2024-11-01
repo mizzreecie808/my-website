@@ -1,0 +1,76 @@
+/* nav menu styling */
+nav {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #adcdeb;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #adcdeb;
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    display: block;
+    float: left;
+    color: #000;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: #9bc2e6;
+    font-weight: 800;   
+}
+#current {
+    float: right;
+}
+
+#mobile-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 770px) {
+	#nav-menu {
+		display: none;
+	}
+	#mobile-menu {
+		display: block;
+	}
+	.slicknav_menu {
+		background-color: #adcdeb !important;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+    .hiking-love {
+        width: 98%;
+        margin: auto;
+        /* text-align: justify; */
+        font-size: 150%;
+        padding: 0;
+        float: none;
+    }
+    .top-hikes .hiking-images img {
+        width: 90%;
+    }
+    aside {
+        clear: both;
+        width: 65%;
+        /* text-align: center; */
+        /* display: flex;
+        justify-content: center; */
+        /* height: 400px; */
+        margin: auto;
+    }
+    aside #girl {
+        width: 90%;
+        margin: auto;
+        display: block;
+    }
+}
