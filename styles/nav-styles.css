@@ -48,6 +48,9 @@ nav ul li a:hover {
 }
 
 @media only screen and (max-width: 790px) {
+    main {
+        height: auto;
+    }
     .hiking-love {
         width: 98%;
         margin: auto;
@@ -60,19 +63,6 @@ nav ul li a:hover {
         width: 90%;
     }
     aside {
-        clear: both;
-        width: 65%;
-        /* text-align: center; */
-        /* display: flex;
-        justify-content: center; */
-        /* height: 400px; */
-        margin: auto;
-    }
-    aside #girl {
-        /* height: 80%;
-        width: 80%; */
-        transform: scale(.8);
-        margin: auto;
         display: none;
     }
 }
@@ -82,29 +72,3 @@ nav ul li a:hover {
         width: 80%;
     }
 }
-/* @media only screen and (max-width: 790px) {
-    .hiking-love {
-        width: 98%;
-        margin: auto;
-        font-size: 150%;
-        padding: 0;
-        float: none;
-    }
-    .top-hikes .hiking-images img {
-        width: 90%;
-    }
-    aside {
-        clear: both;
-        width: 65%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        height: 400px;
-        margin: auto;
-    }
-    aside #girl {
-        margin: auto;
-        display: block;
-        max-height: 380px;
-    }
-} */
