@@ -1,14 +1,18 @@
 :root {
-    --base: #f0f0f0;
-    --base-2: #f7f8f9;
+    --base: #faf9f5;
+    /* --base-2: #f7f8f9; */
+    --base-2: #e3e2e1;
     --base-3: #ffffff;
-    --accent: #1e73b3;
+    --nav-text: #2f70bd;
+    --footer: #73899f;
 }
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 a {
     text-decoration: none;
 }
@@ -17,6 +21,7 @@ body {
     font-family: "Montserrat", sans-serif;
     background-color: var(--base)
 }
+
 main {
     text-align: center;
 }
@@ -26,47 +31,41 @@ main {
     position: relative;
     text-align: center;
     width: 100%;
-    /* background-color: var(--base-2); */
     margin: 0 auto 10px;
 }
+
 #main-image {
     width: 100%;
     max-width: 1200px;
-    /* margin: 10px auto; */
-}
-.image-container > h2 {
-    font-family: "Dancing Script", cursive;
-    position: absolute;
-    top: 10%;
-    text-align: center;
-    color: black;
-    font-size: 1.5em;
-    width: 100%;
 }
 
 /* nav styling */
 .navbar {
-    font-size: 1em; 
+    font-size: 1em;
     font-weight: 500;
     padding-bottom: 10px;
     max-width: 1200px;
     margin: auto;
     text-align: center;
 }
+
 .main-nav {
     list-style-type: none;
     display: none;
 }
+
 .nav-link,
 .logo {
     text-decoration: none;
     color: black;
     background-color: transparent;
 }
+
 .main-nav li {
     text-align: center;
     margin: 15px auto;
 }
+
 .logo {
     display: inline-block;
     font-size: 1.375em;
@@ -83,6 +82,7 @@ main {
     cursor: pointer;
     font-size: 1.5em;
 }
+
 .active {
     display: block;
 }
@@ -93,46 +93,124 @@ main {
     margin: 0 auto 10px;
     display: flex;
     justify-content: space-between;
-
+    flex-wrap: wrap;
 }
+
 /* article styling */
 .article-body {
     width: 60%;
-    background-color: var(--base-3);
+    background-color: var(--base-2);
     margin-right: 20px;
+    margin-bottom: 10px;
+    flex-basis: auto;
 }
+
 .article-body h1 {
     font-family: "Dancing Script", cursive;
     text-align: left;
     margin: 20px 40px;
     text-indent: 50px;
 }
+
 .article-body p {
     text-align: left;
     margin: 20px 40px;
     line-height: 2em;
     text-indent: 50px;
 }
+
 #no-indent {
     text-indent: 0;
 }
 
 /* side-bar stylings */
 .side-bar {
-    width: 40%;
-    /* margin: 10px; */
-    background-color: var(--base-3);
+    width: 38%;
+    background-color: var(--base-2);
+    text-align: left;
+    text-indent: 50px;
+    padding-bottom: 10px;
+    /* this will move side-bar below article-body when screen hits 800px */
+    /* flex: 1 1 298px; */
+    margin-bottom: 10px;
+}
+
+.side-bar h3 {
+    /* font-family: "Dancing Script", cursive; */
+    text-align: left;
+    margin: 30px 40px;
+    text-indent: 50px;
+}
+
+.hiking-benefits {
+    list-style-position: inside;
+    display: block;
+    line-height: 2.5em;
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+.benefit {
+    font-size: 1.2em;
+}
+
+/* photo gallery styling */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 10px 0;
+    background-color: var(--base);
+}
+
+.photo-card {
+    border: 1px solid #ccc;
+    background-color: var(--base-2);
+    max-width: 380px;
+    margin: 6px;
+    width: 45%;
+    border-radius: 0.375em;
+    min-height: 430px;
+}
+
+.photo-card:hover {
+    border: 2px solid #5c5a46;
+}
+
+.photo-card img {
+    width: 100%;
+    height: auto;
+    margin: 1em 0;
+}
+.photo-title {
+    padding: 1em 1em 0;
+    text-indent: 1em;
+    margin-top: 0.5em;
+    text-transform: uppercase;
+}
+
+.desc {
+    padding: 1em;
+    text-align: center;
 }
 
 /* footer styling */
 .foot {
     height: 100px;
-    background-color: purple;
+    background-color: var(--base-2);
     max-width: 1200px;
-    margin: auto;
+    /* to center text vertically, use grid */
+    display: grid;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto 10px;
+    clear: both;
 }
 
 @media screen and (min-width: 800px) {
+    /* navbar styling */
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -161,6 +239,14 @@ main {
     }
     .logo:hover,
     .nav-link:hover {
-        color: #5166ac;
+        color: var(--nav-text);
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .article-body,
+    .side-bar {
+        width: 95%;
+        margin: 0.625em auto;
     }
 }
