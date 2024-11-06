@@ -1,156 +1,141 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-
 :root {
-    --white: #f9f9f9;
-    --blue: #adcdeb;
-    --gray: #85888C;
+    --base: #faf9f5;
+    --hover-text: #2f70bd;
+    --body-font: "Montserrat", sans-serif;
+    --script-font: "Dancing Script", cursive;
 }
 
-/* reset styling */
+/* basic/reset styling */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-}
-
-body {
-    background-color: var(--white);
-    font-family: "Poppins", sans-serif;
 }
 
 a {
     text-decoration: none;
 }
 
-ul {
+/* header styling */
+.header {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* main image styling */
+.image-container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 10px;
+}
+
+#main-image {
+    width: 100%;
+    max-width: 1200px;
+    /* this will crop the sides of the image and keep in container */
+    min-height: 170px;
+    object-fit:cover;
+}
+
+/* nav styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1.5em;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     list-style-type: none;
 }
 
-/* header styling */
-.header {
-    background-color: var(--blue);
-    box-shadow: 1px 1px 5px 0px var(--gray);
-    position: sticky;
-    top: 0;
-    width: 100%;
+.nav-item {
+    margin-left: 2.2em;
 }
 
-.logo {
+.nav-link {
+    font-size: 1em;
+    font-weight: 500;
+    color: #000000;
+}
+
+.nav-logo {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #000000;
+    font-family: var(--script-font);
+}
+
+.nav-link:hover,
+.nav-logo:hover {
+    color: var(--hover-text);
+    transition: all 0.2s ease-in-out;
+    /* prevents other links from moving while on hover */
+    transform: scale(1.1);
     display: inline-block;
-    color: var(--white);
-    height: 60px;
-    margin-left: 10px;
-    /* opacity: 30%; */
 }
 
-/* nav menu styling*/
-.nav {
-    width: 100%;
-    /* height: 100%; */
-    position: fixed;
-    background-color: var(--blue);
-    overflow: hidden;
-}
-
-.menu a {
-    display: block;
-    padding: 1.8em;
-    color: var(--white);
-}
-
-.menu a:hover {
-    background-color: var(--gray);
-}
-
-.nav {
-    max-height: 0;
-    transition: max-height .5s ease-out;
-}
-
-/* hamburger menu styling */
-.hamb {
-    cursor: pointer;
-    float: right;
-    padding: 40px 20px;
-}
-
-.hamb-line {
-    background: var(--white);
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 30px;
-}
-
-/* style span tag */
-.hamb-line::before,
-.hamb-line::after {
-    background: var(--white);
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-
-.hamb-line::before {
-    top: 5px;
-}
-
-.hamb-line::after {
-    top: -5px;
-}
-
-.side-menu {
+/* hamburger styling */
+.hamburger {
     display: none;
 }
 
-/* toggle menu icon */
-.side-menu:checked~nav {
-    max-height: 100%;
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #000000;
 }
-
-.side-menu:checked~.hamb .hamb-line {
-    background: transparent;
-}
-
-.side-menu:checked~.hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top: 0;
-}
-
-.side-menu:checked~.hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top: 0;
-}
-
-body:has(.side-menu:checked) {
-    overflow: hidden;
-}
-
-/* responsiveness */
-@media (min-width: 860px) {
-    .nav {
-        max-height: none;
-        top: 0;
-        position: relative;
-        float: right;
-        width: fit-content;
-        background-color: transparent;
+/* MEDIA QUERIES */
+/* hides `nav-menu` by setting `position: fixed;`  `left: -100%;` on it
+set `hamburger` to `display: block;` so it's visible
+`.nav-menu.active` which sets `left: 0;` on the `nav-menu` */
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        z-index: 9999;
+        left: -100%;
+        top: 3.8em;
+        flex-direction: column;
+        background-color: var(--base);
+        width: 100%;
+        border-radius: 2px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
-    .menu li {
-        float: left;
+    .nav-menu.active {
+        left: 0;
+        height: 200px;
     }
 
-    .menu a:hover {
-        background-color: transparent;
-        color: var(--gray);
-
+    .nav-item {
+        margin: .8em 0;
+        width: 100%;
     }
 
-    .hamb {
-        display: none;
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }

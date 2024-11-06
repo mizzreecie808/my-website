@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
+    <link rel="stylesheet" href="original-styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#nav-menu").slicknav({prependTo:"#mobile-menu"});
+		});
+	</script>
+</head>
+
+<body>
+    <header id="top">
+        <h1>Cerise's Hiking Adventures</h1>
+        <img src="/images/mailbox-peak2.jpg" alt="mailbox" id="main-image">
+    </header>
+
+    <!-- <nav id="mobile-menu"></nav>
+    <nav id="nav-menu">
+        <ul class="nav-list">
+            <li><a href="/pages/essentials.html">10 Essentials</a></li>
+            <li><a href="https://www.thegreatoutdoorsmag.com/gear-guides/best-hiking-apps/">Hiking Apps</a></li>
+            <li><a href="https://www.nps.gov/articles/leave-no-trace-seven-principles.htm">Leave No Trace</a></li>
+            <li><a href="/pages/gallery.html">Photo Gallery</a></li>
+            <li id="current"><a href="#">Home</a></li>
+        </ul>
+    </nav> -->
+    <div id="nav-placeholder"></div>
+    <script>
+        $.get("nav-bar.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script> 
+
+    <main>
+        <section class="hiking-love">
+            <p>My love for hiking started when I was a little girl. Exploring trails with my family, ignited a sense
+                of wonder and curiosity. Each new adventure filled me with excitement. Those early childhood
+                experiences instilled a deep appreciated for the beauty of nature and those memories still inspire
+                me to continue the journey.</p><br>
+            <p>
+                Hiking fills me with a sense of freedom and adventure. Each trail lets me explore the beauty that
+                mother
+                nature offers. I breathe in the fresh air, and escape the hustle of daily life. The feeling of
+                accomplishment when reaching a summit or discovering a hidden waterfall is exhilirting. Hiking
+                allows me to
+                connect the environment and reconnect with myself.</p>
+        </section>
+        <aside>
+            <img src="/images/aside-image.jpg" alt="adventurer" id="girl">
+        </aside>
+    </main>
+    <section class="top-hikes">
+        <h2 id="page-link">Image Gallery</h2>
+        <div class="hiking-images">
+            <img src="/images/pnwHike.jpg" alt="Mountains">
+            <img src="/images/pnwHike.jpg" alt="Mountains">
+            <img src="/images/pnwHike.jpg" alt="Mountains">
+            <img src="/images/pnwHike.jpg" alt="Mountains">
+            <img src="/images/pnwHike.jpg" alt="Mountains">
+            <img src="/images/pnwHike.jpg" alt="Mountains">
+            <img src="/images/pnwHike.jpg" alt="Mountains">
+            <img src="/images/pnwHike.jpg" alt="Mountains">
+        </div>
+    </section>
+
+    <footer>
+        <p><a href="#">Back to Top</a></p>
+        <p>&copy; Copyright 2024 - <em id="name">Cerise Richardson</em> - Olympic College: Fall 2024</p>
+    </footer>
+</body>
+
+</html>
