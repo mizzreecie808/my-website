@@ -1,6 +1,7 @@
 :root {
     --base: #faf9f5;
-    --base-2: #efedeb;
+    --base-2: #f3f3f3;
+    --item-border: #ebeaea;
     --hover-text: #2f70bd;
     --body-font: "Montserrat", sans-serif;
     --script-font: "Dancing Script", cursive;
@@ -26,11 +27,12 @@ body {
 .freedom-hills {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
     max-width: 1200px;
     margin: 10px auto;
-    padding: 20px;
-    gap: 2em;
-    /* background-color: aqua; */
+    padding: 20px 30px;
+    gap: 2.5em;
+    background-color: var(--base-2);
     border-radius: 12px;
     color: #434141;
 }
@@ -39,22 +41,21 @@ body {
     font-size: 2em;
     padding-bottom: 0.5em;
 }
-.words p {
+.words blockquote {
     line-height: 2em;
     font-size: 1.5em;
     text-indent: 3em;
 }
-.book {
-    display: grid;
-    place-items: center;
-}
 .book img {
-    max-width: 400px;
+    max-width: 300px;
     border-radius: 1em;
-    margin: auto;
+    margin: 3em auto;
+}
+.wiki {
+    text-align: center;
+    font-size: 1.2em;
 }
 .wiki a {
-    text-decoration: none;
     font-weight: 500;
     color: #434141;
 }
@@ -64,7 +65,7 @@ body {
     font-weight: 700;
 }
 
-/* css-grid styling for each of the 10 essentials*/
+/* css-grid styling for entire essential grid*/
 .grid-essentials {
     padding: 1em;
     display: grid;
@@ -72,14 +73,16 @@ body {
     grid-template-columns: 1fr 1fr;
     max-width: 1200px;
     margin: auto;
-    background-color: bisque;
+    /* background-color: bisque; */
 }
+
+/* css-grid styling for each item of the 10 essentials*/
 .item {
     display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: .75fr 2fr;
     grid-gap: 0.5em;
-    background-color: aqua;
+    background-color: var(--base-2);
     border-radius: 12px;
 }
 .number {
@@ -89,18 +92,20 @@ body {
     border: solid 1px #000000;
     border-radius: 12px;
     grid-area: 1 / 1 / 2 / 2;
+    color: #095109;
 }
 .image {
     border: solid 1px #000000;
     border-radius: 12px;
-    grid-area: 2 / 2 / 3 / 4;
+    grid-area: 2 / 1 / 3 / 3;
 }
 .desc {
     border: solid 1px #000000;
     border-radius: 12px;
-    grid-area: 1 / 2 / 2 / 4;
+    grid-area: 1 / 2 / 2 / 3;
     padding: 0.5em;
     font-size: 1.2em;
+    color: #434141;
 }
 .grid-essentials img {
     padding: 1em;
@@ -141,4 +146,39 @@ body {
     transform: scale(1.1);
     display: inline-block;
 
+}
+
+@media only screen and (max-width: 768px) {
+    .freedom-hills {
+        grid-template-columns: 3fr;
+        grid-template-rows: 1fr .5fr;
+        gap: 0.5em;
+    }
+    .words {
+        text-align: center;
+        margin: 10px auto;
+    }
+    .book {
+        place-items: center;
+        margin:  0.625em auto;
+        height: auto;
+    }
+    .book img {
+        max-width: 400px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .grid-essentials {
+        grid-gap: 0.5em;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .freedom-hills {
+        grid-template-rows: 1fr .25fr;
+    }
+    .book {
+        height: 100%;
+    }
 }
