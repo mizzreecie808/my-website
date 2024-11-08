@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10 Essentials</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Dancing+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="/styles/essential-styles.css">
-    <link rel="stylesheet" href="/styles/nav-styles.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="/js/nav-bar.js"></script>
+    <title>10 Essentials</title>
 </head>
-
-<body id="top">
-    <header>
-        <h1>10 Essentials of Hiking</h1>
-        <h3>Ten Things you should bring while Hiking</h3>
-        <img src="/images/mailbox-peak2.jpg" alt="mailbox" id="main-image">
-    </header>
-
-    <nav>
-        <ul class="nav-list">
-            <li><a href="essentials.html" target="_blank">10 Essentials</a></li>
-            <li><a href="https://www.thegreatoutdoorsmag.com/gear-guides/best-hiking-apps/" target="_blank">Hiking Apps</a></li>
-            <li><a href="https://www.nps.gov/articles/leave-no-trace-seven-principles.htm" target="_blank">Leave No Trace</a></li>
-            <li><a href="photo-gallery.html">Photo Gallery</a></li>
-            <li id="current"><a href="/index.html">Home</a></li>
-        </ul>
-    </nav>
+<body>
+    <div id="top"></div>
+    <div id="nav-placeholder"></div>
 
     <main>
-        <div class="ten-images">
-            <img src="/images/coming-soon.jpg" alt="Mountains">
-            <img src="/images/coming-soon.jpg" alt="Mountains">
-            <img src="/images/coming-soon.jpg" alt="Mountains">
-            <img src="/images/coming-soon.jpg" alt="Mountains">
-            <img src="/images/coming-soon.jpg" alt="Mountains">
-            <img src="/images/coming-soon.jpg" alt="Mountains">
-            <img src="/images/coming-soon.jpg" alt="Mountains">
-            <img src="/images/coming-soon.jpg" alt="Mountains">
-            <img src="/images/coming-soon.jpg" alt="Mountains">
-            <img src="/images/coming-soon.jpg" alt="Mountains">
+        <div class="freedom-hills">
+            <div class="words">
+                <h3>The 10 Essentials</h3>
+                <blockquote>
+                <p>"The Ten Essentials first appeared in print in the third edition of Mountaineering: <em>The Freedom of the Hills (January 1974).</em> Many regional organizations and authors recommend that hikers, backpackers, and climbers rigorously ensure they have the ten essentials with them. However, personal preferences and differences in conditions may dictate otherwise and with experience most adventurers add and subtract from the list depending on the situation. Some ultralight backpackers do not always carry all of the items and believe it is an acceptable risk they take in order to travel light and fast."</p>
+                </blockquote>
+                <p class="wiki">You can read more about <cite><a href="https://en.wikipedia.org/wiki/Ten_Essentials">The 10 Essentials</a></cite> on Wikipedia.</p>
+            </div>
+            <div class="book">
+                <img src="/images/mountaineering-book.jpg" alt="book cover">
+            </div>
+        </div>
+        <div class="grid-essentials">
+            <div class="item">
+                <div class="number">1</div>
+                <div class="image">
+                    <img src="/images/classic-essentials.jpg" alt="essentials">
+                </div>
+                <div class="desc">
+                    <p>ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quas ratione aliquam neque voluptas quibusdam excepturi nobis ducimus facilis assumenda</p>
+                </div>        
+            </div>
+            
+            <img src="/images/classic-essentials.jpg" alt="essentials">
+            <img src="/images/classic-essentials.jpg" alt="essentials">
+            <img src="/images/classic-essentials.jpg" alt="essentials">
+            <img src="/images/classic-essentials.jpg" alt="essentials">
+            <img src="/images/classic-essentials.jpg" alt="essentials">
+            <img src="/images/classic-essentials.jpg" alt="essentials">
+            <img src="/images/classic-essentials.jpg" alt="essentials">
+            <img src="/images/classic-essentials.jpg" alt="essentials">
+            <img src="/images/classic-essentials.jpg" alt="essentials">
         </div>
     </main>
 
     <footer>
-        <p><a href="essentials.html#top">Back to Top</a></p>
-        <p>&copy; Copyright 2024 - <em id="name">Cerise Richardson</em> - Olympic College: Fall 2024</p>
+        <div class="foot">
+            <p><a href="#top">Back to Top</a></p>
+            <p>&copy; Copyright 2024 - <em id="name">Cerise Richardson</em> - Olympic College: Fall 2024</p>
+        </div>
     </footer>
 </body>
-
 </html>
