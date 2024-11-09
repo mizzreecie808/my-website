@@ -1,8 +1,12 @@
 :root {
     --base: #faf9f5;
+    --base-2: #f3f3f3;
+    --base-3: #efedeb;
+    --item-border: #ebeaea;
     --hover-text: #2f70bd;
     --body-font: "Montserrat", sans-serif;
     --script-font: "Dancing Script", cursive;
+    --number-font: "Capriola", serif;
 }
 
 /* basic/reset styling */
@@ -14,6 +18,11 @@
 
 a {
     text-decoration: none;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--base)
 }
 
 /* header styling */
@@ -30,7 +39,7 @@ a {
     margin: 0 auto 10px;
 }
 
-#main-image {
+#header-image {
     width: 100%;
     max-width: 1200px;
     /* this will crop the sides of the image and keep in container */
@@ -93,6 +102,42 @@ a {
     transition: all 0.3s ease-in-out;
     background-color: #000000;
 }
+
+/* footer styling */
+.foot {
+    height: 100px;
+    background-color: var(--base-2);
+    max-width: 1200px;
+    font-size: 1.2em;
+    /* to center text vertically, use grid */
+    display: grid;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding-top: 1em;
+    clear: both;
+    height: 100%;
+}
+
+.foot p {
+    padding-bottom: 1em;
+}
+
+.foot a {
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.foot a:hover {
+    color: var(--hover-text);
+    transition: all 0.2s ease-in-out;
+    /* prevents other links from moving while on hover */
+    transform: scale(1.1);
+    display: inline-block;
+
+}
+
 /* MEDIA QUERIES */
 /* hides `nav-menu` by setting `position: fixed;`  `left: -100%;` on it
 set `hamburger` to `display: block;` so it's visible

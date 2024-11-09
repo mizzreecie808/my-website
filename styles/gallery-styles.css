@@ -1,29 +1,3 @@
-:root {
-    --base: #faf9f5;
-    --base-2: #efedeb;
-    --hover-text: #2f70bd;
-    --body-font: "Montserrat", sans-serif;
-    --script-font: "Dancing Script", cursive;
-}
-
-/* basic/reset styling */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-}
-
-body {
-    font-family: var(--body-font);
-    background-color: var(--base)
-}
-
-/* header & navigation menu styling 
-located in nav-bar.css file / nav-bar.html file*/
 
 /* main styling */
 main {
@@ -35,63 +9,6 @@ main {
     text-align: center;
 }
 
-/* article styling */
-.article-body {
-    width: 60%;
-    background-color: var(--base-2);
-    margin-right: 20px;
-    margin-bottom: 10px;
-    flex-basis: auto;
-}
-
-.article-body h1 {
-    font-family: var(--script-font);
-    text-align: left;
-    margin: 20px 40px;
-    text-indent: 50px;
-}
-
-.article-body p {
-    text-align: left;
-    margin: 20px 40px;
-    line-height: 2em;
-    text-indent: 50px;
-}
-
-#no-indent {
-    text-indent: 0;
-}
-
-/* side-bar stylings */
-.side-bar {
-    width: 38%;
-    background-color: var(--base-2);
-    text-align: left;
-    text-indent: 50px;
-    padding-bottom: 10px;
-    /* this will move side-bar below article-body when screen hits 800px */
-    /* flex: 1 1 298px; */
-    margin-bottom: 10px;
-}
-
-.side-bar h3 {
-    text-align: left;
-    margin: 30px 40px;
-    text-indent: 50px;
-}
-
-.hiking-benefits {
-    list-style-position: inside;
-    display: block;
-    line-height: 2.5em;
-    text-align: left;
-    margin-bottom: 1em;
-}
-
-.benefit {
-    font-size: 1.2em;
-}
-
 /* photo gallery styling */
 .gallery {
     display: flex;
@@ -99,13 +16,13 @@ main {
     justify-content: space-evenly;
     max-width: 1200px;
     margin: 10px auto;
-    background-color: var(--base);
+    /* background-color: var(--base); */
 }
 
 .photo-card {
     border: 1px solid #ccc;
-    background-color: var(--base-2);
-    max-width: 500px;
+    background-color: var(--base-3);
+    max-width: 590px;
     min-width: 420px;
     margin: 6px;
     width: 45%;
@@ -133,51 +50,4 @@ main {
 .desc {
     padding: 1em;
     text-align: center;
-}
-
-/* footer styling */
-.foot {
-    height: 100px;
-    background-color: var(--base-2);
-    max-width: 1200px;
-    font-size: 1.2em;
-    /* to center text vertically, use grid */
-    display: grid;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-    padding: 1em 0;
-    clear: both;
-    height: 100%;
-}
-
-.foot p {
-    padding-bottom: 1em;
-}
-
-.foot a {
-    color: #000000;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.foot a:hover {
-    color: var(--hover-text);
-    transition: all 0.2s ease-in-out;
-    /* prevents other links from moving while on hover */
-    transform: scale(1.1);
-    display: inline-block;
-
-}
-
-/* MEDIA QUERIES */
-/* this will drop the side-bar below the article-body
-   adjusts the size to 100% to keep it centered on the page */
-@media only screen and (max-width: 1020px) {
-
-    .article-body,
-    .side-bar {
-        width: 100%;
-        margin: 0.625em auto;
-    }
 }

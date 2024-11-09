@@ -1,28 +1,3 @@
-:root {
-    --base: #faf9f5;
-    --base-2: #f3f3f3;
-    --item-border: #ebeaea;
-    --hover-text: #2f70bd;
-    --body-font: "Montserrat", sans-serif;
-    --script-font: "Dancing Script", cursive;
-    --number-font: "Capriola", serif;
-}
-
-/* basic/reset styling */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-}
-
-body {
-    font-family: var(--body-font);
-    background-color: var(--base)
-}
 /* styling for the article and book */
 .freedom-hills {
     display: grid;
