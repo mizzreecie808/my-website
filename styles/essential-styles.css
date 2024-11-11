@@ -31,7 +31,6 @@
 }
 .wiki a {
     font-weight: 500;
-    color: #434141;
 }
 .wiki a:hover {
     color: var(--hover-text);
@@ -48,6 +47,7 @@
     grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
     max-width: 1200px;
     margin: auto;
+    color: var(--number-text);
 }
 
 /* css-grid styling for each item of the 10 essentials*/
@@ -72,7 +72,7 @@
     font-family: var(--number-font);
     border-radius: 12px;
     grid-area: number;
-    color: var(--number-font);
+    color: var(--number-text);
 }
 .image {
     display: flex;
@@ -80,17 +80,16 @@
     grid-area: image;
 }
 .image > img {
-    /* max-width: 500px; */
     width: 80%;
 }
 
 .desc {
     grid-area: desc;
-    /* padding: 0.5em; */
-    padding-top: .5em;
-    font-size: 2.5em;
-    color: #434141;
-    text-align: left;
+    padding-top: .25em;
+    font-size: 3em;
+    font-weight: 600;
+    /* text-align: left; */
+    text-indent: 24px;
 }
 
 /* footer styling */
@@ -130,7 +129,7 @@
     }
     .book img {
         max-width: 200px;
-        margin: 0 auto;
+        margin: 0 autpxo;
         width: 100%;
     }
 }
