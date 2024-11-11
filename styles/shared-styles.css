@@ -1,9 +1,12 @@
 :root {
-    --base: #faf9f5;
-    --base-2: #f3f3f3;
+    /* --base: #faf9f5; */
+    /* --base: #cdd8de; */
+    --base: #99a57e;
+    --base-2: white;
     --base-3: #efedeb;
     --item-border: #ebeaea;
     --hover-text: #2f70bd;
+    --number-text:#333c2c;
     --body-font: "Montserrat", sans-serif;
     --script-font: "Dancing Script", cursive;
     --number-font: "Capriola", serif;
@@ -113,7 +116,7 @@ body {
     display: grid;
     align-items: center;
     text-align: center;
-    margin: auto;
+    margin: 10px auto;
     padding-top: 1em;
     clear: both;
     height: 100%;
