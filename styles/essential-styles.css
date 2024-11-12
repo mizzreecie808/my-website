@@ -80,7 +80,7 @@
     grid-area: image;
 }
 .image > img {
-    width: 80%;
+    width: 90%;
 }
 
 .desc {
@@ -88,8 +88,6 @@
     padding-top: .25em;
     font-size: 3em;
     font-weight: 600;
-    /* text-align: left; */
-    text-indent: 24px;
 }
 
 /* footer styling */
@@ -99,10 +97,6 @@
 
 
 @media only screen and (max-width: 908px) {
-    /* .grid-essentials {
-        grid-gap: 0.5em;
-        grid-template-columns: 1fr;
-    } */
     .item-container:nth-child(2n-2) {
         /* position: fixed; */
         top: 0;
@@ -151,9 +145,18 @@
     .wiki {
         font-size: 1.1em;
     }
+    .desc {
+        font-size: 2em;
+        padding-top: .5em;
+    }
+    .grid-essentials{
+        width: 100%;
+        margin: auto;
+    }
     .item-container {
         padding: 10px 0 50px;
-        margin-right: 10px;
-        width: auto;
+        width: 100%;
+        margin: auto;
     }
+
 }
