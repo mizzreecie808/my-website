@@ -9,16 +9,16 @@
     gap: 2.5em;
     background-color: var(--base-2);
     border-radius: 12px;
-    color: #434141;
+    color: var(--number-text);
 }
 .words h3 {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
     padding-bottom: 0.5em;
 }
 .words blockquote {
     line-height: 2em;
-    font-size: 1em;
+    font-size: 1.1em;
     text-indent: 3em;
 }
 .book img {
@@ -27,17 +27,22 @@
 }
 .wiki {
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1em;
+    padding-top: 1em;
 }
 .wiki a {
-    font-weight: 500;
+    font-weight: 550;
+    padding-bottom: 1.2em;
 }
 .wiki a:hover {
     color: var(--hover-text);
     transition: all 0.2s ease-in-out;
     font-weight: 700;
+    font-size: 1.1em;
 }
-
+cite a:visited {
+    color: var(--number-text);
+}
 
 /* css-grid styling for entire essential grid*/
 .grid-essentials {
@@ -59,7 +64,7 @@
     grid-gap: 0.5em;
     background-color: var(--base-2);
     box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-    padding: 10px 10px 50px;
+    padding: 10px 0 50px;
 }
 /* allows for offseting the containers */
 .item-container:nth-child(2n-2) {
@@ -95,10 +100,8 @@
     margin-top: 50px;
 }
 
-
 @media only screen and (max-width: 908px) {
     .item-container:nth-child(2n-2) {
-        /* position: fixed; */
         top: 0;
     }
     .foot {
@@ -136,6 +139,9 @@
     .book {
         height: 100%;
     }
+    .book img {
+        margin-top: 0;
+    }
     .words h3 {
         font-size: 2em;
     }
@@ -150,12 +156,12 @@
         padding-top: .5em;
     }
     .grid-essentials{
-        width: 100%;
+        width: 100vw;
         margin: auto;
     }
-    .item-container {
+    .grid-essentials > .item-container {
         padding: 10px 0 50px;
-        width: 100%;
+        width: 90%;
         margin: auto;
     }
 
