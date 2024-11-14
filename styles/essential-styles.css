@@ -27,8 +27,7 @@
 }
 .wiki {
     text-align: center;
-    font-size: 1em;
-    padding-top: 1em;
+    font-size: 1.1em;
 }
 .wiki a {
     font-weight: 550;
@@ -72,7 +71,7 @@ cite a:visited {
     top: 50px;
 }
 .number {
-    font-size: 4em;
+    font-size: 3.5em;
     text-align: center;
     font-family: var(--number-font);
     border-radius: 12px;
@@ -85,13 +84,13 @@ cite a:visited {
     grid-area: image;
 }
 .image > img {
-    width: 90%;
+    width: 70%;
 }
 
 .desc {
     grid-area: desc;
     padding-top: .25em;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 600;
 }
 
