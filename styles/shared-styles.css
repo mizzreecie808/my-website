@@ -19,6 +19,7 @@
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 body {
@@ -105,7 +106,7 @@ body {
 }
 
 /* footer styling */
-.foot {
+footer {
     height: 100px;
     background-color: var(--base-2);
     max-width: 1200px;
@@ -114,7 +115,7 @@ body {
     display: grid;
     align-items: center;
     text-align: center;
-    margin: 10px auto;
+    margin: 2em auto 0;
     padding-top: 1em;
     clear: both;
     height: 100%;
