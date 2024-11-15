@@ -1,78 +1,97 @@
-/* main styling */
+/* Main styling
+   =============================================================== */
 main {
     max-width: 1200px;
-    margin: 0 auto 10px;
+    margin: 0 auto 0.625em;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     text-align: center;
 }
 
-/* article styling */
-.article-body {
-    width: 60%;
+/* Article styling, About Me section
+   =============================================================== */
+article {
+    flex: 1 0 50%;
     background-color: var(--base-2);
-    margin-right: 20px;
-    margin-bottom: 10px;
-    flex-basis: auto;
+    margin-right: 1.25em;
+    margin-bottom: 0.625em;
+
+    h1 {
+        font-family: var(--script-font);
+    }
+    h1, p {
+        text-align: left;
+        margin: 1.25em 2.5em;
+        line-height: 2em;
+        text-indent: 50px;
+    }
+    #no-indent {
+        text-indent: 0;
+    }
 }
 
-.article-body h1 {
-    font-family: var(--script-font);
-    text-align: left;
-    margin: 20px 40px;
-    text-indent: 50px;
-}
-
-.article-body p {
-    text-align: left;
-    margin: 20px 40px;
-    line-height: 2em;
-    text-indent: 50px;
-}
-
-#no-indent {
-    text-indent: 0;
-}
-
-/* side-bar stylings */
-.side-bar {
-    width: 38%;
+/* Aside styling, List of Benefits section
+   =============================================================== */
+aside {
+    flex: 1 0 30%;
     background-color: var(--base-2);
     text-align: left;
-    text-indent: 50px;
+    text-indent: 30px;
     padding-bottom: 10px;
-    /* this will move side-bar below article-body when screen hits 800px */
-    /* flex: 1 1 298px; */
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
+
+    h3 {
+        margin: 2.5em 2.5em 0.625em;
+    }
+    ul {
+        list-style-position: inside;
+        display: block;
+        line-height: 2.5em;
+    }
 }
 
-.side-bar h3 {
-    text-align: left;
-    margin: 30px 40px;
-    text-indent: 50px;
+/* MEDIA QUERIES
+   =============================================================== */
+@media only screen and (max-width: 890px) {
+    aside h3 {
+        margin-left: 1em;
+    }
 }
+@media only screen and (max-width: 830px) {
+    main {
+        flex-direction: column;
+        margin: auto;
+        row-gap: 10px;
+    }
+    article {
+        width: 98%;
+        margin: auto;
 
-.hiking-benefits {
-    list-style-position: inside;
-    display: block;
-    line-height: 2.5em;
-    text-align: left;
-    margin-bottom: 1em;
+        h1 {
+            text-align: center;
+            text-indent: 0;
+        }
+    }
+    aside {
+        width: 98%;
+        margin: auto;
+    
+        ul {
+            text-indent: 6em;
+        }
+        h3 {
+            text-align: center;
+            text-indent: 0;
+            margin: 2em auto 1em;
+        }
+    }
 }
-
-.benefit {
-    font-size: 1.2em;
-}
-
-/* MEDIA QUERIES */
-/* this will drop the side-bar below the article-body
-   adjusts the size to 100% to keep it centered on the page */
-@media only screen and (max-width: 1020px) {
-
-    .article-body,
-    .side-bar {
-        width: 100%;
-        margin: 0.625em auto;
+@media only screen and (max-width: 490px) {
+    aside h3 {
+        margin: 2.5em auto 0.625em;
+    }
+    aside ul {
+        text-indent: 1em;
     }
 }
