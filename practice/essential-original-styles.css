@@ -1,0 +1,167 @@
+/* styling for the article and book */
+.book-container {
+    display: grid;
+    grid-template-columns: 3.3fr 0.7fr;
+    grid-template-rows: 1fr;
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 20px 30px;
+    gap: 2.5em;
+    background-color: var(--base-2);
+    border-radius: 12px;
+    color: var(--number-text);
+}
+.words h3 {
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 0.5em;
+}
+.words blockquote {
+    line-height: 2em;
+    font-size: 1.1em;
+    text-indent: 3em;
+}
+.book img {
+    max-width: 200px;
+    margin: 3em auto 0 ;
+}
+.wiki {
+    text-align: center;
+    font-size: 1.1em;
+}
+.wiki a {
+    font-weight: 550;
+    padding-bottom: 1.2em;
+}
+.wiki a:hover {
+    color: var(--hover-text);
+    transition: all 0.2s ease-in-out;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+cite a:visited {
+    color: var(--number-text);
+}
+
+/* css-grid styling for entire essential grid*/
+.grid-essentials {
+    padding: 0.5em;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+    max-width: 1200px;
+    margin: auto;
+    color: var(--number-text);
+}
+
+/* css-grid styling for each item of the 10 essentials*/
+.item-container {
+    display: grid;
+    grid-template-areas: 
+        "number desc desc"
+        "image image image";
+    grid-gap: 0.5em;
+    background-color: var(--base-2);
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    padding: 10px 0 50px;
+}
+/* allows for offseting the containers */
+.item-container:nth-child(2n-2) {
+    position: relative;
+    top: 50px;
+}
+.number {
+    font-size: 3.5em;
+    text-align: center;
+    font-family: var(--number-font);
+    border-radius: 12px;
+    grid-area: number;
+    color: var(--number-text);
+}
+.image {
+    display: flex;
+    justify-content: center;
+    grid-area: image;
+}
+.image > img {
+    width: 70%;
+}
+
+.desc {
+    grid-area: desc;
+    padding-top: .25em;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+/* footer styling */
+.foot {
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 908px) {
+    .item-container:nth-child(2n-2) {
+        top: 0;
+    }
+    .foot {
+        margin-top:0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .book-container {
+        grid-template-columns: 3fr;
+        grid-template-rows: .5fr .5fr;
+        gap: 0.5em;
+    }
+    .words {
+        text-align: center;
+        margin: 10px auto;
+    }
+    .book {
+        place-items: center;
+        margin:  0.625em auto;
+        height: auto;
+    }
+    .book img {
+        max-width: 200px;
+        margin: 0 autpxo;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .book-container {
+        grid-template-rows: 1fr .25fr;
+        margin: auto;
+    }
+    .book {
+        height: 100%;
+    }
+    .book img {
+        margin-top: 0;
+    }
+    .words h3 {
+        font-size: 2em;
+    }
+    .words blockquote {
+        font-size: 1.5em;
+    }
+    .wiki {
+        font-size: 1.1em;
+    }
+    .desc {
+        font-size: 2em;
+        padding-top: .5em;
+    }
+    .grid-essentials{
+        width: 100vw;
+        margin: auto;
+    }
+    .grid-essentials > .item-container {
+        padding: 10px 0 50px;
+        width: 90%;
+        margin: auto;
+    }
+
+}
