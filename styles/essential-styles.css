@@ -4,7 +4,7 @@
     max-width: 1200px;
     margin: 10px auto 30px;
     padding: 20px 40px;
-    background-color: var(--base-2);
+    background-color: var(--base-white);
     border-radius: 12px;
     color: var(--number-text);
 
@@ -61,7 +61,7 @@
         "desc desc desc"
         "image image image";
     grid-gap: 0.5em;
-    background-color: var(--base-2);
+    background-color: var(--base-white);
     box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
     padding: 10px 0 50px;
     width: 48%;

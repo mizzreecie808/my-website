@@ -25,7 +25,7 @@ main {
    =============================================================== */
 .photo-card {
     border: 1px solid #ccc;
-    background-color: white;
+    background-color: var(--base-white);
     max-width: 590px;
     min-width: 420px;
     margin: 1.2em 0;

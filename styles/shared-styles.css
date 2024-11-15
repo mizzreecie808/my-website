@@ -1,6 +1,6 @@
 :root {
     --base: #99a57e;
-    --base-2: white;
+    --base-white: white;
     --base-3: #efedeb;
     --item-border: #ebeaea;
     --hover-text: #2f70bd;
@@ -108,7 +108,7 @@ body {
 /* footer styling */
 footer {
     height: 100px;
-    background-color: var(--base-2);
+    background-color: var(--base-white);
     max-width: 1200px;
     font-size: 1.2em;
     /* to center text vertically, use grid */

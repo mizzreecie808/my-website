@@ -13,7 +13,7 @@ main {
    =============================================================== */
 article {
     flex: 1 0 50%;
-    background-color: var(--base-2);
+    background-color: var(--base-white);
     margin-right: 1.25em;
     margin-bottom: 0.625em;
 
@@ -35,7 +35,7 @@ article {
    =============================================================== */
 aside {
     flex: 1 0 30%;
-    background-color: var(--base-2);
+    background-color: var(--base-white);
     text-align: left;
     text-indent: 30px;
     padding-bottom: 10px;
