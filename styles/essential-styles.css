@@ -66,7 +66,7 @@
     padding: 10px 0 50px;
     width: 48%;
 
-    .desc {
+    h3.desc {
         grid-area: desc;
         display: flex;
         justify-content: center;
@@ -83,33 +83,14 @@
 /* Media Queries for 768px and 480px screens
    =============================================================== */
 @media only screen and (max-width: 768px) {
-    .book-container {
-        grid-template-columns: 3fr;
-        grid-template-rows: .5fr .5fr;
-        gap: 0.5em;
-    }
-    .words {
-        text-align: center;
-        margin: 10px auto;
-    }
-    .book {
-        place-items: center;
-        margin:  0.625em auto;
-        height: auto;
-    }
-    .book img {
-        max-width: 200px;
-        margin: 0 autpxo;
-        width: 100%;
-    }
-    .desc {
-        font-size: 1em;
+    .item-container h3.desc {
+       font-size: 1.3em;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    .desc {
-        font-size: 2em;
+    .item-container h3.desc {
+        font-size: 1.8em;
         padding-top: .5em;
     }
     .flex-essentials > .item-container {
