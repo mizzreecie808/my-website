@@ -1,6 +1,8 @@
+/* Shared styling for all pages
+   =============================================================== */
 :root {
     --base: #99a57e;
-    --base-white: white;
+    --base-white: #ffffff;
     --base-3: #efedeb;
     --item-border: #ebeaea;
     --hover-text: #2f70bd;
@@ -10,134 +12,127 @@
     --number-font: "Capriola", serif;
 }
 
-/* basic/reset styling */
+/* BASIC RESET styles
+   =============================================================== */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+    > a {
+        text-decoration: none;
+        color: black;
+    }
+
+    > body {
+        font-family: var(--body-font);
+        background-color: var(--base)
+    }
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-body {
-    font-family: var(--body-font);
-    background-color: var(--base)
-}
-
-/* header styling */
-.header {
+/* HEADER styling
+   =============================================================== */
+header {
     max-width: 1200px;
     margin: auto;
+
+    .image-container {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 10px;
+    }
+    
+    #header-image {
+        width: 100%;
+        /* max-width: 1200px; */
+        /* min-height: 170px; */
+        object-fit:cover;
+    }
 }
 
-/* main image styling */
-.image-container {
-    position: relative;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto 10px;
-}
-
-#header-image {
-    width: 100%;
-    max-width: 1200px;
-    /* this will crop the sides of the image and keep in container */
-    min-height: 170px;
-    object-fit:cover;
-}
-
-/* nav styling */
-.navbar {
+/* NAVIGATION MENU styling
+   =============================================================== */
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em 1.5em;
-}
 
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
+    .nav-logo {
+        font-size: 1.5em;
+        font-weight: 600;
+        font-family: var(--script-font);
+    }
+    .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+    }
+    .nav-item {
+        margin-left: 2.5em;
+    }
+    .nav-link {
+        font-size: 1em;
+        font-weight: 500;
+    }
 }
-
-.nav-item {
-    margin-left: 2.2em;
-}
-
-.nav-link {
-    font-size: 1em;
-    font-weight: 500;
-    color: #000000;
-}
-
-.nav-logo {
-    font-size: 1.5em;
-    font-weight: 600;
-    color: #000000;
-    font-family: var(--script-font);
-}
-
 .nav-link:hover,
 .nav-logo:hover {
-    color: var(--hover-text);
-    transition: all 0.2s ease-in-out;
+    color: var(--base-white);
+    transition: all 0.3s ease-in-out;
     /* prevents other links from moving while on hover */
     transform: scale(1.1);
     display: inline-block;
 }
 
-/* hamburger styling */
+/* HAMBURGER MENU styling
+   =============================================================== */
 .hamburger {
     display: none;
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #000000;
+    }
 }
 
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #000000;
-}
-
-/* footer styling */
+/* FOOTER styling
+   =============================================================== */
 footer {
-    height: 100px;
     background-color: var(--base-white);
     max-width: 1200px;
     font-size: 1.2em;
-    /* to center text vertically, use grid */
-    display: grid;
-    align-items: center;
     text-align: center;
     margin: 2em auto 0;
     padding-top: 1em;
-    clear: both;
-    height: 100%;
+    line-height: 2.5em;
+
+    /* height: 100px; */
+    /* display: grid; */
+    /* align-items: center; */
+    /* clear: both; */
+    /* height: 100%; */
+    a {
+        color: #000000;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
 }
 
-.foot p {
-    padding-bottom: 1em;
-}
-
-.foot a {
-    color: #000000;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.foot a:hover {
+footer a:hover {
     color: var(--hover-text);
     transition: all 0.2s ease-in-out;
     /* prevents other links from moving while on hover */
-    transform: scale(1.1);
+    transform: scale(1.2);
+    font-weight: bolder;
     display: inline-block;
-
 }
 
 /* MEDIA QUERIES */
