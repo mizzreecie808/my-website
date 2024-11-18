@@ -1,0 +1,38 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    background-color: var(--base-white);
+    padding: 1em 2em;
+}
+/* TABLE styling
+   =============================================================== */
+.table-container {
+    width: 35%;
+    background-color: aqua;
+}
+table {
+    font-size: 1.2em;
+    border-collapse: collapse;
+    margin: auto;
+    
+    th, tr {
+        padding: 15px;
+        border-bottom: 1px solid black;
+        height: 50px;
+        text-align: center;
+    }
+    tr td a {
+        padding: 10px 20px;
+    }
+    tbody > tr:last-child {
+        border-bottom: none;
+        height: 20px;
+    }
+}
+
+section {
+    width: 60%;
+}
