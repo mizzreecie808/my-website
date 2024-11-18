@@ -1,4 +1,4 @@
-/* Article styling
+/* SECTION styling
    =============================================================== */
 .book-container {
     max-width: 1200px;
@@ -30,12 +30,12 @@
         font-weight: 700;
         text-align: center;
         transition: all 500ms ease-in-out;
-        padding: 0.5em 0;
+        padding: 0.5em 2em;
     }
     a:hover {
         transform-origin: center;
-        background-color: antiquewhite;
-        font-size: 1.2em;
+        background-color: var(--hover-text);
+        color: var(--base-white);
     }
 }
 
@@ -57,9 +57,10 @@
    =============================================================== */
 .item-container {
     display: grid;
+    grid-template: repeat(2, auto) / 1fr;
     grid-template-areas: 
-        "desc desc desc"
-        "image image image";
+        "desc"
+        "image";
     grid-gap: 0.5em;
     background-color: var(--base-white);
     box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);

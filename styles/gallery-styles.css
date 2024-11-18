@@ -18,13 +18,13 @@ main {
     max-width: 1200px;
     margin: 10px auto;
     padding: 20px 0;
-    background-color: #f4f3f3;
+    background-color: var(--gallery-color);
 }
 
 /* DIV styling - Individual Photo Card Styling
    =============================================================== */
 .photo-card {
-    border: 1px solid #ccc;
+    border: 1px solid var(--item-border);
     background-color: var(--base-white);
     max-width: 590px;
     min-width: 420px;
