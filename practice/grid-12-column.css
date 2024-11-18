@@ -1,0 +1,163 @@
+:root {
+    --base: #99a57e;
+    --base-white: white;
+    --base-3: #efedeb;
+    --item-border: #ebeaea;
+    --hover-text: #2f70bd;
+    --number-text:#4c5e3e;
+    --body-font: "Montserrat", sans-serif;
+    --script-font: "Dancing Script", cursive;
+    --number-font: "Capriola", serif;
+}
+html {
+    font-family: var(--body-font);
+    background-color: var(--base);
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* height: 600px; */
+    max-width: 1200px;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 60px 1fr 1fr 80px;
+    grid-gap: 1em;
+
+    > * {
+        background-color: var(--base-white);
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+/* NAVBAR styling
+   =============================================================== */
+nav {
+    grid-row: 1 / 2;
+    grid-column: 1 / span 12;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1.5em;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+
+        li {
+            margin-left: 2.2em;
+
+            a {
+                font-size: 1em;
+                font-weight: 500;
+            }
+        }
+    }
+    .nav-logo {
+        font-size: 1.5em;
+        font-weight: 600;
+        font-family: var(--script-font);
+    }
+    /* HAMBURGER MENU styling
+   =============================================================== */
+    .hamburger {
+        display: none;
+    }
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #000000;
+    }
+}
+.nav-link:hover,
+.nav-logo:hover {
+    color: var(--hover-text);
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+
+
+header {
+    grid-row: 2 / 3;
+    grid-column: 1 / span 12;
+    position: relative;
+    width: 100%;
+
+    #header-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+#s1 {
+    grid-row: 3 / 4;
+    grid-column: 1 / span 8;
+}
+#s2 {
+    grid-row: 3 / 4;
+    grid-column: 9 / span 4;
+}
+footer {
+    grid-row: 4 / 5;
+    grid-column: 1 / span 12;
+}
+
+/* MEDIA QUERIES */
+/* hides `nav-menu` by setting `position: fixed;`  `left: -100%;` on it
+set `hamburger` to `display: block;` so it's visible
+`.nav-menu.active` which sets `left: 0;` on the `nav-menu` */
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        z-index: 9999;
+        left: -100%;
+        top: 3.8em;
+        flex-direction: column;
+        background-color: var(--base);
+        width: 100%;
+        border-radius: 2px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+        height: 200px;
+    }
+
+    .nav-item {
+        margin: .8em 0;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
