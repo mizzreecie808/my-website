@@ -12,25 +12,30 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <a class="nav-logo" href="#">Let's Hike</a>
-        <ul class="nav-menu">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="../pages/gallery.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="../pages/essentials.html">10 Essentials</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://www.nps.gov/articles/leave-no-trace-seven-principles.htm">Leave No Trace</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
-    <script src="../js/hamburger.js"></script>
     <header>
-        <img src="../images/mailbox-peak2.jpg" alt="mailbox" id="header-image">
+        <nav class="navbar">
+            <a class="nav-logo" href="#">Let's Hike</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="../pages/gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="../pages/essentials.html">10 Essentials</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.nps.gov/articles/leave-no-trace-seven-principles.htm">Leave No Trace</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
     </header>
-    <section id="s1">
+    <script src="../js/hamburger.js"></script>
+
+    <section class="image-container">
+        <img src="../images/mailbox-peak2.jpg" alt="hike" id="main-image">
+        <p class="bottom-right">Mailbox Peak - North Bend, WA</p>
+    </section>
+
+    <main id="s1">
         <article>
             <h1 id="about">My Love for Hiking...</h1>
             <p id="no-indent">started when I was a little girl. Exploring trails with my family, ignited a sense
@@ -50,7 +55,7 @@
                 allows me to
                 connect the environment and reconnect with myself.</p>
         </article>
-    </section>
+    </main>
     <section id="s2">Aside - SPAN 4</section>
     <footer>Footer - SPAN 12</footer>
 </body>

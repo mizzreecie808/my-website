@@ -14,35 +14,35 @@ main {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     max-width: 1200px;
-    margin: 10px auto;
-    padding: 20px 0;
-    background-color: var(--gallery-color);
+    margin: 1.5em auto 0;
+    gap: 1.5em;
+    /* padding: 20px 0; */
+    /* background-color: var(--gallery-color); */
 }
 
 /* DIV styling - Individual Photo Card Styling
    =============================================================== */
 .photo-card {
     border: 1px solid var(--item-border);
-    background-color: var(--base-white);
-    max-width: 590px;
+    background-color: #2b7a78;
     min-width: 420px;
-    margin: 1.2em 0;
-    width: 43%;
+    width: 47%;
     border-radius: 0.375em;
     transition: transform 0.5s linear;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
 
     .photo-title {
-        padding: 1em 1em 0;
-        text-indent: 1em;
-        margin-top: 0.5em;
+        padding: 1.5em 1em 0;
         text-transform: uppercase;
+        height: fit-content;
     }
     .desc {
         padding: 0 1em 1em;
-        text-align: center;
+        text-align: bottom center;
         font-size: 1.5em;
     }
     a img {
@@ -50,34 +50,32 @@ main {
         margin: 1em 0;
     }
 }
-/* HOVER Styling - Individual Photo Card increases size on hover
+/* HOVER Styling - Individual Photo Card moves left or right
    =============================================================== */
-.photo-card:hover {
-    transform: scale(1.3);
+.photo-card:nth-child(even):hover {
+    transform: translateX(-20px);
+}
+.photo-card:nth-child(odd):hover {
+    transform: translateX(20px);
 }
 
 /* Media Queries for 768px and 480px screens
    =============================================================== */
-@media only screen and (min-width: 857px) and (max-width: 1020px) {
+@media only screen and (min-width: 768px) and (max-width: 1020px) {
     .photo-card {
-        min-width: 380px;
+        min-width: 250px;
     }
 }
-@media only screen and (max-width: 856px) {
-    .gallery {
-        background-color: var(--base);
+@media only screen and (max-width: 768px) {
+    .photo-card:nth-child(even):hover {
+        transform: scale(1.05);
     }
-    .photo-card {
-        width: auto;
-    }
-}
-@media only screen and (max-width: 800px) {
-    .photo-card:hover {
-        transform: none;
+    .photo-card:nth-child(odd):hover {
+        transform: scale(1.05);
     }
 }
 @media only screen and (max-width: 440px) {
     .photo-card{
-        min-width: auto;
+        width: 98vw;
     }
 }
