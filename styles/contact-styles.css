@@ -63,14 +63,98 @@ form {
     }
 }
 
-/* Make form look nice on smaller screens */
-/* @media only screen and (max-width: 580px) {
-    .contact-form {
-        left: 3%;
-        margin-right: 3%;
-        width: 88%;
-        margin-left: 0;
-        padding-left: 3%;
-        padding-right: 3%;
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    background-color: var(--base-white);
+    padding: 30px 0;
+
+    h2 {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
     }
-} */
+}
+
+/* TABLE styling
+   =============================================================== */
+.table-container {
+    margin: 20px auto 0;
+    width: 400px;
+}
+table {
+    font-size: 1em;
+    border-collapse: collapse;
+    margin: auto;
+    width: 80%;
+    
+    th, td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+    td:nth-child(2) {
+        text-align: left;
+    }
+    tbody tr:hover {
+        background-color: #f5f5f5;
+        cursor: pointer;
+    }
+    th {
+        background-color: rgba(6, 120, 161, 0.208);
+    }
+    #two-column {
+        text-align: right;
+        font-weight: bold;
+    }
+}
+
+/* GRAPH styling
+   =============================================================== */
+.bar-graph {
+    margin: 20px auto 0;
+    width: 500px;
+}
+.bar-item {
+    display: flex;
+    max-width: 500px;
+    margin-bottom: 10px;
+    height: 40px;
+    text-indent: 0.75em;
+
+    .label-left {
+        color: white;
+        background-color: #3aafa9;
+        text-align: right;
+        direction: rtl;
+        display: inline-flex;
+        align-items: center;
+    }
+    img {
+        height: 30px;
+        margin: auto 10px;
+    }
+    .label-right {
+        background-color: lightgrey;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+#japan, #ca {
+    width: 74%;
+}
+#wa {
+    width: 70%;
+}
+#hi {
+    width: 28%;
+}
+#az, #ut, #nv {
+    width: 20%;
+}

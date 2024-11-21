@@ -55,9 +55,16 @@ header {
         color: var(--base-white);
         font-size: 1.2em;
         font-family: var(--script-font);
-        width: 100%;
+        width: fit-content;
         text-align: right;
         right: 1em;
+    }
+    .bottom-right:hover {
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 2em;
+        color: black;
+        background-color: white;
     }
 }
 
@@ -190,6 +197,11 @@ footer {
         text-align: center;
         right: 0;
         font-size: 1em;
+        width: 100%;
+    }
+    header .bottom-right:hover {
+        font-weight: normal;
+        font-size: 1.2em;
     }
     
 }
