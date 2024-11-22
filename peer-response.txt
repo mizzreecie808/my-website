@@ -1,11 +1,24 @@
-1. On the "10 essentials" page, card #8 scale is wonky, probably because you wanted it to scale with the picture on card #7.  I would pick a picture that matches aspect ratio, or edit the photos to match. 
-2. I think you should list the trail that has the colorful mailbox somewhere on your website since now I want to go visit it.
-3. At the top of the mailbox picture, there are these little specs that seem like they should be cropped out of the picture.
-4. I could very well be mistaken, but I think the titles on these images might have been switched around.
+Module 7 Peer Responses received
 
-FIXES MADE
+From Jamison Wathen:
+1. On the "10 essentials" page, card #8 scale is wonky, probably because you wanted it to scale with the picture on card #7.  I would pick a picture that matches aspect ratio, or edit the photos to match. 
+2. The "leave no trace" link looks like a navigation link, but it takes you to an external website.  I expected it to be another navigation link that kept me in the site due to how it is presented.  
+3. I believe the 10 essentials quote needs to be attributed to something specific, especially when you are marking the page as a copywrite of your own. 
+
+
+From Ella Strenge:
+1. I think you should list the trail that has the colorful mailbox somewhere on your website since now I want to go visit it. 
+2. At the top of the mailbox picture, there are these little specs that seem like they should be cropped out of the picture. 
+3. I could very well be mistaken, but I think the titles on these images might have been switched around. Mt. Townsend and Mt. Ashigara has their captions swapped.
+
+FIXES IMPLEMENTED
 ------------------------------------------------------------------
-1. Cropped the 8-food.jpg image in order to provide better flow between the adjacent 7-shelter.jpg image.
-2. Added text over the main image, "Mailbox Peak - North Bend, WA" in order to specify the location the picture was taken.
-3. Cropped the mailbox-peak2.jpg image to remove the black spots that were there.
-4. Swapped the descriptions of two gallery pictures. Mt. Kintoki and Mt. Townsend were switched.
+From Jamison Wathen
+1. Cropped the wonky card #8 image in order to provide better flow between the adjacent card #7 image.
+2. Removed the "leave no trace" link from the navigation bar.
+3. Revised the verbage on the 10 essentials article.
+
+From Ella Strenge:
+1. Added the trail name and location on the main image. "Mailbox Peak - North Bend, WA".
+2. Cropped the maing image "mailbox-peak2.jpg" to remove the black spots that were there.
+3. Swapped the descriptions of two gallery pictures, Mt. Ashigara and Mt. Townsend were switched.
