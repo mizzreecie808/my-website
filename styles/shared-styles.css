@@ -169,7 +169,7 @@ footer {
 
     .nav-menu.active {
         left: 0;
-        height: 200px;
+        height: auto;
     }
 
     .nav-item {
