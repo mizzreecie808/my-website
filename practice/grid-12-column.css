@@ -1,27 +1,40 @@
 :root {
-    --base: #99a57e;
-    --base-white: white;
-    --base-3: #efedeb;
+    --base: #def2f1;
+    --base-white: #ffffff;
+    --gallery-color: #feffff;
     --item-border: #ebeaea;
-    --hover-text: #2f70bd;
-    --number-text:#4c5e3e;
+    --hover-text: #2b7a78;
     --body-font: "Montserrat", sans-serif;
     --script-font: "Dancing Script", cursive;
     --number-font: "Capriola", serif;
 }
-html {
-    font-family: var(--body-font);
-    background-color: var(--base);
+/* BASIC RESET styles
+   =============================================================== */
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
+
+    > a {
+        text-decoration: none;
+        color: black;
+    }
+
+    > body {
+        font-family: var(--body-font);
+        background-color: var(--base);
+    }
 }
 
+/* BODY styling
+=============================================================== */
 body {
     margin: 0;
     max-width: 1200px;
     display: grid;
     margin: auto;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 60px 310px 1fr 1fr 80px;
+    grid-template-rows: 50px auto 1fr 80px;
     grid-gap: 1em;
 
     a {
@@ -33,41 +46,12 @@ body {
 /* HEADER styling
 =============================================================== */
 header {
-    /* max-width: 1200px; */
     margin: auto;
     grid-row: 1 / 2;
     grid-column: 1 / span 12;
     position: relative;
     width: 100%;
 }
-
-/* IMAGE CONTAINER styling
-=============================================================== */
-section.image-container {
-    position: relative;
-    width: 100%;
-    margin: 0 auto 10px;
-    grid-row: 2 / 3;
-    grid-column: 1 / span 12;
-
-    #main-image {
-        width: 100%;
-        object-fit:cover;
-    }
-    .bottom-right {
-        position: absolute;
-        bottom: 0.5em;
-        color: var(--base-white);
-        font-size: 1.2em;
-        font-family: var(--script-font);
-        width: 100%;
-        text-align: right;
-        right: 1em;
-    }
-}
-
-
-
 
 /* NAVIGATION MENU styling
 =============================================================== */
@@ -98,11 +82,12 @@ nav {
 }
 .nav-link:hover,
 .nav-logo:hover {
-    color: var(--base-white);
+    color: var(--hover-text);
     transition: all 0.3s ease-in-out;
     /* prevents other links from moving while on hover */
-    transform: scale(1.1);
+    transform: scale(1.2);
     display: inline-block;
+    font-weight: bolder;
 }
 
 /* HAMBURGER MENU styling
@@ -121,29 +106,116 @@ nav {
     }
 }
 .hamburger:hover .bar {
-    background-color: white;
+    background-color: var(--hover-text);
 }
 
-#s1 {
-    grid-row: 3 / 4;
-    grid-column: 1 / span 8;
-    background-color: var(--base-white);
+/* IMAGE CONTAINER styling
+=============================================================== */
+.image-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto 10px;
+    grid-row: 2 / 3;
+    grid-column: 1 / span 12;
+
+    #header-image {
+        max-width: 100%;
+        object-fit:cover;
+    }
+    .bottom-right {
+        position: absolute;
+        bottom: 0.5em;
+        color: var(--base-white);
+        font-size: 1.2em;
+        font-family: var(--script-font);
+        width: fit-content;
+        text-align: right;
+        right: 1em;
+        transition: all 0.7s ease-in-out;
+    }
+    .bottom-right:hover {
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 2em;
+        color: black;
+        background-color: white;
+        transition: all 0.5s ease-in-out;
+    }
 }
-#s2 {
+
+/* ARTICLE styling - About Me section
+   =============================================================== */
+article {
     grid-row: 3 / 4;
-    grid-column: 9 / span 4;
+    grid-column: 1 / span 7;
+    flex: 1 0 50%;
     background-color: var(--base-white);
+    margin-right: 1.25em;
+    margin-bottom: 0.625em;
+
+    h1 {
+        font-family: var(--script-font);
+    }
+    h1, p {
+        text-align: left;
+        margin: 1.25em 2.5em;
+        line-height: 2em;
+        text-indent: 50px;
+    }
+    #no-indent {
+        text-indent: 0;
+    }
 }
+/* ASIDE styling - List of Benefits section
+   =============================================================== */
+aside {
+    grid-row: 3 / 4;
+    grid-column: 8 / span 5;
+    flex: 1 0 30%;
+    background-color: var(--base-white);
+    text-align: left;
+    text-indent: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 0.625em;
+
+    h3 {
+        margin: 2.5em 2.5em 0.625em;
+    }
+    ul {
+        list-style-position: inside;
+        display: block;
+        line-height: 2.5em;
+    }
+}
+
+/* FOOTER styling
+   =============================================================== */
 footer {
+    background-color: var(--base-white);
     grid-row: 4 / 5;
     grid-column: 1 / span 12;
-    background-color: var(--base-white);
+    width: 100%;
+    font-size: 1.2em;
+    text-align: center;
+    /* margin: 2em auto 0; */
+    line-height: 2em;
+
+    a {
+        color: #000000;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    a:hover {
+        color: var(--hover-text);
+        transition: all 0.2s ease-in-out;
+        transform: scale(1.2);
+        font-weight: bolder;
+        display: inline-block;
+    }
 }
 
-/* MEDIA QUERIES */
-/* hides `nav-menu` by setting `position: fixed;`  `left: -100%;` on it
-set `hamburger` to `display: block;` so it's visible
-`.nav-menu.active` which sets `left: 0;` on the `nav-menu` */
+/* MEDIA QUERIES
+   =============================================================== */
 @media only screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -161,7 +233,7 @@ set `hamburger` to `display: block;` so it's visible
 
     .nav-menu.active {
         left: 0;
-        height: 200px;
+        height: 230px;
     }
 
     .nav-item {
@@ -184,5 +256,35 @@ set `hamburger` to `display: block;` so it's visible
 
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+    header .bottom-right {
+        text-align: center;
+        right: 0;
+        font-size: 1em;
+        width: 100%;
+    }
+    header .bottom-right:hover {
+        font-weight: normal;
+        font-size: 1.2em;
+    }
+    body {
+        grid-template: repeat(6, auto) / 1fr;
+        gap: 0;
+    }
+    article {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        width: 100%;
+        margin: 0.5em auto 0;
+    }
+    aside {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        width: 100%;
+        margin: 0.5em auto 0;
+    }
+    footer {
+        grid-row: 5 / 6;
+        margin: 0.5em auto 0;
     }
 }
