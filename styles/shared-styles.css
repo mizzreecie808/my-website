@@ -45,8 +45,6 @@ header {
     
     #header-image {
         width: 100%;
-        /* max-width: 1200px; */
-        /* min-height: 170px; */
         object-fit:cover;
     }
     .bottom-right {
@@ -58,6 +56,8 @@ header {
         width: fit-content;
         text-align: right;
         right: 1em;
+        padding: 0.25em 0.5em;
+        transition: all 0.7s ease-in-out;
     }
     .bottom-right:hover {
         font-weight: bold;
@@ -86,6 +86,7 @@ nav {
         justify-content: space-between;
         align-items: center;
         list-style-type: none;
+        
     }
     .nav-item {
         margin-left: 2.5em;

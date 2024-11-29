@@ -1,12 +1,10 @@
-/* SECTION styling
+/* ARTICLE styling
    =============================================================== */
-.book-container {
+article {
     max-width: 1200px;
     margin: 10px auto 30px;
     padding: 20px 40px;
     background-color: var(--base-white);
-    border-radius: 12px;
-    /* color: var(--number-text); */
 
     h3 {
         text-align: center;
@@ -29,7 +27,7 @@
     a {
         font-weight: 700;
         text-align: center;
-        transition: all 500ms ease-in-out;
+        transition: all 0.5s ease-in-out;
         padding: 0.5em 2em;
     }
     a:hover {
@@ -42,7 +40,7 @@
 
 /* Flexbox for 10 Essentials photo cards
    =============================================================== */
-.flex-essentials {
+.essentials-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -55,7 +53,7 @@
 
 /* CSS Grid for each individual Essential photo card
    =============================================================== */
-.item-container {
+/* .item-container {
     display: grid;
     grid-template: repeat(2, auto) / 1fr;
     grid-template-areas: 
@@ -79,11 +77,48 @@
         max-width: 95%;
         margin: auto;
     }
+} */
+
+/* CSS Grid for each individual Essential photo card
+   =============================================================== */
+.item-container {
+    display: grid;
+    grid-template: 40px auto 80px / 1fr;
+    grid-gap: 0.5em;
+    background-color: var(--base-white);
+    box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+    padding: 0 0 40px;
+    width: 48%;
+
+    h3 {
+        font-size: 1.8em;
+        font-weight: 600;
+        display: flex;
+        align-self: flex-end;
+        justify-content: center;
+    }
+    img {
+        width: 85%;
+        margin: auto;
+        filter: grayscale(75%);
+        transition: all 0.5s ease-in-out;
+    }
+    p {
+        text-align: center;
+        width: 85%;
+        margin: auto;
+    }
+    .image:hover {
+        filter: brightness(100%);
+    }
 }
 
 /* Media Queries for 768px and 480px screens
    =============================================================== */
 @media only screen and (max-width: 768px) {
+    .item-container {
+        grid-template: 40px auto 120px / 1fr;
+    }
     .item-container h3.desc {
        font-size: 1.3em;
     }
@@ -92,9 +127,8 @@
 @media only screen and (max-width: 480px) {
     .item-container h3.desc {
         font-size: 1.8em;
-        padding-top: .5em;
     }
-    .flex-essentials > .item-container {
+    .essentials-container > .item-container {
         width: 95%;
     }
 
