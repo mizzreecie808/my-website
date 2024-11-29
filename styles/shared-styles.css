@@ -57,14 +57,15 @@ header {
         text-align: right;
         right: 1em;
         padding: 0.25em 0.5em;
-        transition: all 0.7s ease-in-out;
+        transition: all 1s ease-in-out;
     }
     .bottom-right:hover {
         font-weight: bold;
         cursor: pointer;
-        font-size: 2em;
+        font-size: 1.5em;
         color: black;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50px;
     }
 }
 
