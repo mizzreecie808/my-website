@@ -1,8 +1,6 @@
-/* Shared styling for all pages
+/* SHARED STYLING - used on all pages
    =============================================================== */
 :root {
-    /* --base: #d7c2bd; */
-    /* --base: #88bdbc; */
     --base: #def2f1;
     --base-white: #ffffff;
     --gallery-color: #feffff;
@@ -133,7 +131,7 @@ footer {
     max-width: 1200px;
     font-size: 1.2em;
     text-align: center;
-    margin: 2em auto 0;
+    margin: 10px auto 0;
     line-height: 2em;
 
     a {
