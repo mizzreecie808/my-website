@@ -26,6 +26,10 @@
     > body {
         font-family: var(--body-font);
         background-color: var(--base);
+        /* background: url("../images/clouds-background.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover; */
     }
 }
 
@@ -88,18 +92,17 @@ nav {
         
     }
     .nav-item {
-        margin-left: 2.5em;
+        padding-left: 2.5em;
     }
     .nav-link {
         font-size: 1em;
-        font-weight: 500;
+        font-weight: 500;        
     }
 }
 .nav-link:hover,
 .nav-logo:hover {
     color: var(--hover-text);
     transition: all 0.3s ease-in-out;
-    /* prevents other links from moving while on hover */
     transform: scale(1.2);
     display: inline-block;
     font-weight: bolder;
